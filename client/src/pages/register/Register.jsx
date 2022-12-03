@@ -1,5 +1,5 @@
 import './register.scss'
-
+import { Link } from "react-router-dom"
 const Register = () => {
   return (
     <div className='register'>
@@ -10,7 +10,9 @@ const Register = () => {
           </h1>
           <p>Grow Smart is to help parents interact with other parents to discuss their child’s daily routine activities, find diet tips and cover all parent concerns on a single platform.  </p>
           <span>Do you have an account?</span>
-          <button>Login</button>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
       </div>
       <div className='right'>
        <h1>Register</h1>

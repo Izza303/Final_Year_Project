@@ -1,4 +1,5 @@
 import './login.scss'
+import { Link } from "react-router-dom"
 const Login = () => {
   return (
     <div className='login'>
@@ -8,8 +9,10 @@ const Login = () => {
            Grow Smart
           </h1>
           <p>Grow Smart is to help parents interact with other parents to discuss their child’s daily routine activities, find diet tips and cover all parent concerns on a single platform.  </p>
-          <span>Don't you have an account</span>
-          <button>Register</button>
+          <span>Don't you have an account?</span>
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
       </div>
       <div className='right'>
        <h1>Login</h1>
