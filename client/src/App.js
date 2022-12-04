@@ -16,7 +16,7 @@ import Profile from "./pages/profile/Profile";
 
 export default function App() {
 
-
+  const currentUser=true;
   const Layout = () => {
     return (
       <div>
@@ -30,13 +30,23 @@ export default function App() {
       </div>
     );
   };
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children;
+  };
 
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element:
-          <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",
