@@ -1,6 +1,15 @@
 import './register.scss'
 import { Link } from "react-router-dom"
+import { useState } from 'react'
 const Register = () => {
+  const [name, setName] = useState("")
+  const [phone , setPhone] = useState("")
+  const [email,setEmail] = useState("")
+  const [password,setPassword] = useState("")
+  const regiterData = () =>{
+    console.log(name , phone , password , email)
+    alert("Data is submitted")
+  }
   return (
     <div className='register'>
       <div className='card'>
@@ -17,10 +26,10 @@ const Register = () => {
       <div className='right'>
        <h1>Register</h1>
       <form>
-        <input type="text" placeholder='Name'></input>
-        <input type="text" placeholder='PhoneNo'></input>
-        <input type="email" placeholder='Email'></input>
-        <input type="password" placeholder='Password'></input>
+      <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}></input>
+        <input type="text" placeholder='PhoneNo' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+        <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
         <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"></input>
   <label class="form-check-label" for="inlineCheckbox1">Parent</label>
@@ -30,7 +39,7 @@ const Register = () => {
   <label class="form-check-label" for="inlineCheckbox2">Both</label>
 </div>
 
-        <button>Register</button>
+<button onClick={regiterData} type="button">Register</button>
       </form>
       </div>
 
