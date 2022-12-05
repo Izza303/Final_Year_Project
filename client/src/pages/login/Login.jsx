@@ -1,6 +1,13 @@
 import './login.scss'
 import { Link } from "react-router-dom"
+import { useState } from 'react'
 const Login = () => {
+  const [email, setEmail] = useState("")
+  const [password,setPassword] = useState("")
+  const checkLogin = () =>{
+    console.log(password , email)
+    alert("Logged- In")
+  }
   return (
     <div className='login'>
       <div className='card'>
@@ -17,9 +24,9 @@ const Login = () => {
       <div className='right'>
        <h1>Login</h1>
       <form>
-        <input type="text" placeholder='Username'></input>
-        <input type="password" placeholder='Password'></input>
-        <button>Login</button>
+      <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
+        <button onClick={checkLogin} type="button">Login </button>
       </form>
       </div>
 
