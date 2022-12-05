@@ -21,6 +21,15 @@ const Register = () => {
         <input type="text" placeholder='PhoneNo'></input>
         <input type="email" placeholder='Email'></input>
         <input type="password" placeholder='Password'></input>
+        <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"></input>
+  <label class="form-check-label" for="inlineCheckbox1">Parent</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"></input>
+  <label class="form-check-label" for="inlineCheckbox2">Nutrition</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" disabled></input>
+  <label class="form-check-label" for="inlineCheckbox2">Both</label>
+</div>
+
         <button>Register</button>
       </form>
       </div>
