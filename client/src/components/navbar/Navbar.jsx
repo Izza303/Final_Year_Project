@@ -29,7 +29,7 @@ function Navbar() {
         <NotificationsOutlinedIcon />
         <div className="user">
           <img
-            src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="https://images.pexels.com/photos/3030090/pexels-photo-3030090.jpeg?cs=srgb&dl=pexels-caleb-oquendo-3030090.jpg&fm=jpg"
             alt=""
           />
           <span>Faiza Aman</span>
